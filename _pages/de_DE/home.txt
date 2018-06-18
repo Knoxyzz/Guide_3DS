@@ -9,17 +9,17 @@ header:
 excerpt: "Eine vollständige Anleitung für 3DS Custom Firmware, <br />von original zu boot9strap.<br />" #
 ---
 
-For complete guides to homebrew and custom firmware for other devices, check out [Hacks.Guide](https://hacks.guide).
+Für vollständige guides um homebrew und/oder custom firmware für andere Geräte zu installieren, check das hier aus: [Hacks.Guide](https://hacks.guide).
 {: .notice--primary}
 
 ___
 
-Lies alle Einleitungsseiten gründlich durch (einschließlich dieser), bevor du fortfährst.
+Lies alles gründlich durch (einschließlich das hier), bevor du fortfährst.
 {: .notice--warning}
 
 {% capture notice-1 %}
-**Diese Anleitung ist _nur_ für Handelsübliche Konsolen (vom Endnutzer im Handel erworben; nicht aus dem Nintendo Entwickler Programm bezogen) gedacht!    
-If you have a developer ("PANDA") console, check out the [Panda 3DS Hacks Guide](https://panda.hacks.guide).
+**Diese Anleitung ist _nur_ für Handelsübliche Konsolen (Aus dem laden oder sonstige gekauften Konsolen; nicht aus dem Nintendo Entwickler Programm bezogen) gedacht!    
+Falls du eine Etwickler ("PANDA") Konsole hast, siehe dir das hier an [Panda 3DS Hacks Guide](https://panda.hacks.guide).
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
@@ -27,7 +27,7 @@ If you have a developer ("PANDA") console, check out the [Panda 3DS Hacks Guide]
 {% capture notice-1 %}
 Diese Anleitungen ist in verschiedenen Sprachen verfügbar!    
 Um die Sprache zu ändern klick auf das <i class="fa fa-language" aria-hidden="true"></i> Symbol oben rechts in der Ecke.    
-Alternatively, click [here](https://crowdin.com/project/3ds-guide) to help to keep these translations up to date.
+Alternativ kannst du  [hier](https://crowdin.com/project/3ds-guide) klicken,um zu helfen die Übersetzungen auf dem neustem Stand zu halten.
 {% endcapture %}
 
 <div class="notice--success">{{ notice-1 | markdownify }}</div>
@@ -37,7 +37,7 @@ This guide needs *your* help to seed [these]({{ "rss.xml" | absolute_url }}) tor
 
 ## Was ist Homebrew?
 
-[**Homebrew**](https://de.wikipedia.org/wiki/Homebrew) bezeichnet für gewöhnlich Software, die nicht von Nintendo autorisiert wurde. This includes homebrew tools, applications, games, and emulators.
+[**Homebrew**](https://de.wikipedia.org/wiki/Homebrew) ist eine Software, die nicht von Nintendo autorisiert wurde. Dies beinhaltet auch homebrew tools, applikationen, Spiele, und emulatoren.
 
 In den meisten Fällen kannst du Homebrew auf deiner Konsole mit Hilfe der Nintendo 3DS Sound-App komplett kostenlos nutzen. Es gibt aber auch verschiedene andere Exploits, z. B. im Browser oder in kommerziellen Spielen, die zur Ausführung von Homebrew genutzt werden können.
 
@@ -45,7 +45,7 @@ In den meisten Fällen kannst du Homebrew auf deiner Konsole mit Hilfe der Ninte
 
 **Custom Firmware** ("CFW") ermöglicht dir fortgeschrittene Hacks, welche Userland-Homebrew nicht ohne weiteres erlaubt. Zum Beispiel lassen sich mit Hilfe von Signatur-Patches unsignierte Titel installieren, die direkt im HOME-Menü erscheinen.
 
-CFW kann auf jeder Konsole mit jeder Version aufgesetzt werden (kann aber weitere Werkzeuge / Zubehör benötigen bei Versionen > 11.3.0).
+CFW kann auf jeder Konsole mit jeder Version aufgesetzt/installliert werden (kann aber weitere Dinge / Zubehör benötigen bei Versionen > 11.3.0).
 
 ## Was wird mit dieser Anleitung installiert?
 
@@ -54,13 +54,13 @@ von boot9strap mit Custom-Firmware auszustatten. Für manche Versionen wird Home
 
 boot9strap ist die neueste und beste Methode um Custom-Firmware auszuführen, die uns während des Startvorgangs nach wenigen Millisekunden fast komplette Kontrolle über das System gibt, ähnlich wie BootMii für die Wii. Es gibt uns noch früher Kontrolle als arm9loaderhax, und im Gegensatz zu dem normalen sighax benutzt boot9strap einen NDMA-Überschreibungs-Exploit um Boot9-Code auszuführen. Das bedeutet, dass jede Konsole mit boot9strap eine Kopie der einzigartigen Konsolen-OTP (`OTP.bin`), der ARM11 bootrom (`boot11.bin`) und der ARM9-Bootrom (`boot9.bin`) anfertigen kann.
 
-Die Vorteile von boot9strap gegenüber anderen Methoden um Custom Firmware auszuführen sind zahlreich, weshalb es empfohlen ist, diese Anleitung allen anderen, die auf veralteter Software basieren (z. B. Menuhax + rxTools, arm9loaderhax oder sogar normaler sighax), vorzuziehen ist.
+Die Vorteile von boot9strap gegenüber anderen Methoden um Custom Firmware auszuführen sind zahlreich, weshalb wir empfehlen,diese Anleitung/Guide zu benutzen, und NICHT alle anderen die auf veralteter Software basieren (z. B. Menuhax + rxTools, arm9loaderhax oder sogar normaler sighax).
 
-For information on how boot9strap works, please see [this paper](https://arxiv.org/abs/1802.00359).
+Für Informationen,wie boot9starp funktioniert, schaue dir  [dieses Papier](https://arxiv.org/abs/1802.00359) an.
 
-For a list of each of the calculated sighax signatures, see [this gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
+For a list of each of the calculated sighax signatures, see [this list](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
 
-## Was kann ich mit Custom Firmware anstellen?
+## Was kann ich mit Custom Firmware machen,Welche Vorteile hat es?
 
 + Spiele unabhängig der Region alle Game Cards und eShop Spiele
 +Gestalte dein Home-Menü mit von Benutzer erstellten [Designs und Splash Screens](https://themeplaza.eu/)
